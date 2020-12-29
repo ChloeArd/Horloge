@@ -29,21 +29,26 @@ body {
     position: absolute;
     bottom: 475px;
     right: 765px;
-    transform-origin: top;
+    transform-origin: bottom;
 }
 
 #heures{
     border-right: 5px solid black;
     height: 150px;
+    border-radius: 0 50% 0 50%;
 }
 
 #minutes{
     border-right: 3px solid black;
     height: 120px;
+    transform: rotate(310deg);
+    border-radius: 0 50% 0 50%;
 }
 
 #secondes{
     border-right: 1px solid red;
     height: 90px;
+    transform: rotate(150deg);
+    border-radius: 0 50% 0 50%;
 }
 
