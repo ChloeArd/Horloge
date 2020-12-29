@@ -10,14 +10,15 @@ setInterval(function(){
     let minutes = dateNow.getMinutes();
     let hours = dateNow.getHours();
 
-    //Les secondes actuelles sont tournés à 360 deg dans l'horloge, toutes les 60s, + 10 pour que l'aiguille soit plus exacte
+    //L'aiguille des secondes tournent à 360 deg dans l'horloge, toutes les 60s, + 10 pour que l'aiguille soit plus exacte
     let secTime = ((seconds / 60) * 360 + 10);
     secondsNeedle.style.transform = "rotate(" + (secTime)+"deg)";
 
-    //Les minutes actuelles sont tournés à 360 deg dans l'horloge, toutes les 60s en fonction des secondes
-    let minTime = ((minutes / 60) * 360) + ((seconds / 60));
+    //l'aiguille des minutes tournent à 360 deg dans l'horloge, toutes les 60minutes en fonction des secondes et avance de 6 a chaque fois qu'1s passe
+    let minTime = ((minutes / 60) * 360) + ((seconds / 60) * 6);
     minutesNeedle.style.transform = "rotate(" + (minTime)+"deg)";
 
+    //l'aiguille des heures tournent à 360 deg dans l'horloge, toutes les 12heures en fonction des minutes et avance de 30 a chaque fois qu'1min passe
     let hourTime = ((hours / 12) * 360) + ((minutes / 60 ) * 30);
     hoursNeedle.style.transform = "rotate(" + (hourTime)+"deg)";
 
