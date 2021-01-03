@@ -15,21 +15,32 @@ body {
 }
 
 #horloge{
-    width: 70%;
+    width: 400px;
+    height: 100%;
     margin: auto;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
 }
 
 #imgHorloge{
-    margin-top: 50px;
     width: 400px;
+    height: 400px;
     box-shadow: 10px 10px 30px darkgrey;
+}
+
+#taille{
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    position: absolute;
 }
 
 #heures, #minutes, #secondes {
     position: absolute;
-    bottom: 471px;
+    bottom: 50%;
     transform-origin: bottom;
 }
 
